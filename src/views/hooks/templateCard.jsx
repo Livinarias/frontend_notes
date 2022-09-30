@@ -19,6 +19,7 @@ export const TemplateCard = () => {
             Blandit tempus porttitor aasfs. Integer posuere erat a ante
             venenatis.
           </p>
+          <span>Juan,15 años</span>
         </div>
         <div className="d-flex align-items-center">
           <button className="mr-1 p-1">
