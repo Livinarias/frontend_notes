@@ -1,22 +1,26 @@
 import { useState } from 'react';
-import { UseNotes } from './views/hooks/useNotes';
-import { MainPage, NotesPage } from './views/pages/';
+import { UseNotes } from './hooks/useNotes';
+import { MainPage, NotesPage } from './pages';
+import  { Noteget }  from './hooks';
 import './App.css'
+
 
 export const App = () => {
 
   const [change, setchange] = useState("MainPage");
-  console.log(change);
+
+  let { get } = Noteget();
+
   return (
     <UseNotes>
-      { change === "NotesPages" ? <NotesPage /> : <MainPage/>}
+      { change === "NotesPages" ? <NotesPage props={get}/> : <MainPage/>}
       <div className="main_card">
-      <button 
-        onClick={() => setchange("MainPage")}
-        >
-        Inicio
-      </button>
-      <button onClick={() => setchange("NotesPages")}>
+        <button 
+          onClick={() => setchange("MainPage")}
+          >
+          Inicio
+        </button>
+        <button onClick={() => setchange("NotesPages")}>
           Agregar una nota
         </button>
       </div>

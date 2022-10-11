@@ -1,11 +1,11 @@
 import { CardNote, Navbar } from "../hooks";
 import "../styles/notes.css";
 
-export const NotesPage = () => {
+export const NotesPage = (props) => {
   return (
     <div className="page-content container note-has-grid">
       <Navbar/>
-      <CardNote/>
+      <CardNote props={props}/>
     </div>
   );
 };

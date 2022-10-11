@@ -1,7 +1,13 @@
+import { useState } from 'react';
+import { UseModal } from './useModal';
 import "../styles/notes.css";
 
 export const Navbar = () => {
+    
+    const [popup, setpopup] = useState(false);
+
     return (
+        <>
         <div className="page-content container note-has-grid">
             <ul className="nav nav-pills p-3 bg-white mb-3 rounded-pill align-items-center">
                 <li className="nav-item">
@@ -14,17 +20,18 @@ export const Navbar = () => {
                     </a>
                 </li>
                 <li className="nav-item ms-auto">
-                    <a
-                       href=""
-                        className="nav-link btn-primary rounded-pill d-flex align-items-center px-3"
+                    <button
+                       onClick={() => setpopup(true)}
+                       className="nav-link rounded-pill note-link d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2 active"
                         id="add-notes"
                     >
-                        {" "}
                         <i className="icon-note m-1"></i>
-                        <span className="d-none d-md-block font-14">Add Notes</span>
-                    </a>
+                        <span className="d-none d-md-block">Add Notes</span>
+                    </button>
                 </li>
             </ul>
         </div>
+        {popup === true ? <UseModal onClose={() => setpopup(false)} show={popup}/> : null}
+        </>
     )
 }
