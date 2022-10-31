@@ -1,4 +1,4 @@
-
+// metodo que recibe las variables de ambiente
 export const getEnvVariables = () => {
   
   import.meta.env;

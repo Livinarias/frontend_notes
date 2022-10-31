@@ -1,12 +1,14 @@
-//componente pop up creacion notas
+//componente pop up edición notas
+//proximamente
 import { useState } from "react";
 import "../styles/modal.css";
 import createNoteApi from "./Notepost";
 
 
 
-export const UseModal = (props) => {
+export const UseModalEdit = (props) => {
 
+  console.log(props)
   const [change, setchange] = useState({
     name: 'test',
     title: "title",

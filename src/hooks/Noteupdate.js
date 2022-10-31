@@ -1,3 +1,5 @@
+//funcion que consume endpoint put
+//proximamente
 import Swal from 'sweetalert2';
 import { EditNote } from "../api";
 

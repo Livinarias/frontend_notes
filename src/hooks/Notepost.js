@@ -1,3 +1,4 @@
+// funcion que consumo endpoint Post
 import Swal from 'sweetalert2';
 import { CreateNote } from "../api";
 

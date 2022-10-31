@@ -1,3 +1,4 @@
+//consumo de la api para el metodo Get
 import axios from 'axios';
 import { getEnvVariables } from '../helpers/getEnvVariables';
 

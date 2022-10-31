@@ -1,3 +1,4 @@
+// componente que llama el menu de las notas
 import { useState } from 'react';
 import { UseModal } from './useModal';
 import "../styles/notes.css";

@@ -1,4 +1,4 @@
-
+// pagina de inicio
 export const MainPage = () => {
 
   return (

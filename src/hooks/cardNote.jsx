@@ -1,3 +1,4 @@
+//componente que llama el template de las notas
 import { TemplateCard } from "./templateCard";
 import "../styles/notes.css";
 

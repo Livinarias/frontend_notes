@@ -1,3 +1,4 @@
+//pagina de notas
 import { CardNote, Navbar } from "../hooks";
 import "../styles/notes.css";
 

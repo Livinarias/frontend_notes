@@ -1,10 +1,21 @@
+//componente template notas
+import { useCallback, useState } from "react";
+import { UseModalEdit } from "./useModalEdit";
+import "../styles/notes.css";
 
 
 export const TemplateCard = ({ props }) => {
 
-    const { props: dataProps } = props;
-    const { props: dataApi } = dataProps;
+  const { props: dataProps } = props;
+  const { props: dataApi } = dataProps;
 
+  const [popup, setpopup] = useState(false);
+
+  /*const removeNote = useCallback(() => {
+      first
+    },
+    [second],
+  )*/
   return (
     <>
       {dataApi.data[0].map((result) =>
@@ -38,6 +49,7 @@ export const TemplateCard = ({ props }) => {
             </div>
             <div className="d-flex align-items-center">
               <button 
+                onClick={() => setpopup(true)}
                 className="mr-1 p-1">
                 <i className="fa fa-edit"></i>
               </button>
@@ -49,7 +61,13 @@ export const TemplateCard = ({ props }) => {
           </div>
         </div>
       )
-      }
+    }
+    {popup === true ? <UseModalEdit
+                        onClose={() => setpopup(false)}
+                        //param={}
+                        show={popup}/>
+                    : <span/>
+    }
     </>
   );
 };
